@@ -41,16 +41,15 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  //background-color: #4a4a4a;
 }
 
 .full-screen-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5vh 5vw; /* Отступы сверху и снизу 5vh, по бокам 5vw */
+  padding: 5vh 5vw;
   width: 100%;
-  max-width: 1600px; /* Максимальная ширина блока */
+  max-width: 1600px;
   height: 100%;
   max-height: 700px;
   background: url("@/assets/fon-header.jpg");
@@ -58,7 +57,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Внутренняя тень */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
 }
 
@@ -67,13 +66,13 @@ export default {
   flex: 1;
   padding: 20px;
   text-align: center;
-  opacity: 0; /* Делаем элементы невидимыми изначально */
-  transform: translateY(20px); /* Сдвигаем элементы вниз */
-  transition: all 1s ease-in-out; /* Добавляем плавную анимацию */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
 }
 
 .slide-up {
-  animation: slideUp 1.5s forwards; /* Запускаем анимацию */
+  animation: slideUp 1.5s forwards;
 }
 
 @keyframes slideUp {
@@ -136,7 +135,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .full-screen-block {
-    padding: 0.5vh 0.5vw; /* Отступы сверху и снизу 0.5vh, по бокам 0.5vw */
+    padding: 0.5vh 0.5vw;
   }
   image-container {
     width: 100%;

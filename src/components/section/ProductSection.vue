@@ -83,12 +83,10 @@ export default {
     changeImage(index) {
       this.selectedImage = this.images[index];
       this.nameChairs = this.nameChairsId[index];
-      console.log(this.selectedImage)
-      console.log(this.nameChairs)
+      console.log(this.form);
     },
   },
   mounted() {
-    // Установка изображения по умолчанию при монтировании компонента
     this.nameChairs = this.nameChairsId[0];
     this.selectedImage = this.images[0];
   },
@@ -100,7 +98,7 @@ export default {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column; /* Изменение направления flex на столбец для мобильных устройств */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -116,7 +114,7 @@ export default {
 
 .main-image img {
   max-width: 70vw;
-  height: auto; /* Изменение высоты на автоматическую для сохранения пропорций */
+  height: auto;
 }
 
 .color-switcher {
@@ -136,7 +134,7 @@ export default {
 .text-blocks {
   text-align: center;
   margin: 5vw;
-  width: 100%; /* Изменение ширины на 100% для адаптации */
+  width: 100%;
 }
 
 .text-block {
@@ -152,7 +150,7 @@ export default {
     height: auto;
   }
   .text-blocks {
-    width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
+    width: 80%;
   }
   .color-block {
     width: 30px;
@@ -165,7 +163,7 @@ export default {
     height: auto;
   }
   .text-blocks {
-    width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
+    width: 80%;
   }
   .color-block {
     width: 40px;
@@ -179,7 +177,7 @@ export default {
     height: auto;
   }
   .text-blocks {
-    width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
+    width: 80%;
   }
 
 }
@@ -189,29 +187,29 @@ export default {
     height: auto;
   }
   .main-image img {
-    max-width: 50vw; /* Уменьшаем максимальную ширину изображения для более крупных экранов */
+    max-width: 50vw;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1920px) {
   .container {
     height: 100vh;
-    flex-direction: row; /* Изменение направления flex на столбец для мобильных устройств */
+    flex-direction: row;
 
   }
   .main-image img {
-    max-width: 40vw; /* Уменьшаем максимальную ширину изображения для еще более крупных экранов */
+    max-width: 40vw;
   }
 }
 
 @media (min-width: 1920px) {
   .container {
     height: 100vh;
-    flex-direction: row; /* Изменение направления flex на столбец для мобильных устройств */
+    flex-direction: row;
   }
 
   .main-image img {
-    max-width: 30vw; /* Уменьшаем максимальную ширину изображения для самых крупных экранов */
+    max-width: 30vw;
   }
 }
 </style>

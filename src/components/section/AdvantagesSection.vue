@@ -100,10 +100,10 @@ export default {
   }
   .plus-list {
     grid-template-columns: 1fr;
-    display: flex; /* Изменяем grid на flex для простоты центрирования */
-    flex-direction: column; /* Изменяем направление на столбец для мобильных устройств */
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    align-items: center; /* Центрируем элементы по вертикали */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 90vw;
   }
 }
@@ -115,10 +115,10 @@ export default {
   }
   .plus-list {
     grid-template-columns: 1fr;
-    display: flex; /* Изменяем grid на flex для простоты центрирования */
-    flex-direction: column; /* Изменяем направление на столбец для мобильных устройств */
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    align-items: center; /* Центрируем элементы по вертикали */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 80vw;
   }
 }

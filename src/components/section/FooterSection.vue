@@ -69,20 +69,20 @@ a {
 .github-logo {
   max-width: 30px;
   height: auto;
-  vertical-align: middle; /* Выравнивание по вертикали */
+  vertical-align: middle;
   border-radius: 50%;
   background-color: white;
 }
 
 .github-text {
-  vertical-align: middle; /* Выравнивание по вертикали */
-  margin-left: 5px; /* Небольшой отступ от логотипа */
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 .github-link {
   display: flex;
-  align-items: center; /* Выравнивание по вертикали для ссылки */
-  justify-content: center; /* Выравнивание по горизонтали для ссылки */
-  height: 100%; /* Заполнение высоты блока */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 </style>
