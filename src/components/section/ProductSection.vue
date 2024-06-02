@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="text-blocks">
-      <h1>Компьютерное кресло {{this.nameChairs}}</h1>
+      <h1>Компьютерное кресло {{ this.nameChairs }}</h1>
     </div>
     <div class="image-switcher">
       <h1>Our chairs</h1>
@@ -63,14 +63,14 @@ export default {
         7: yellow,
       },
       nameChairsId: {
-        0:'DXRacer Craft CRA/D5000/N Originals',
-        1:'DXRacer Craft CRA/D5000/NC1 Koi Fish',
-        2:'DXRacer Craft CRA/D5000/BW America Edition',
-        3:'DXRacer Craft CRA/D5000/P Hello Human Cat',
-        4:'DXRacer Craft CRA/D5000/W Thinker',
-        5:'DXRacer Craft CRA/D5000/NC9 Guild Wars 2: End of Dragons Edition' ,
-        6:'DXRacer Craft CRA/D5000/GY Astronaut',
-        7:'DXRacer Craft CRA/D5000/YW Rabbit in Dino'
+        0: 'DXRacer Craft CRA/D5000/N Originals',
+        1: 'DXRacer Craft CRA/D5000/NC1 Koi Fish',
+        2: 'DXRacer Craft CRA/D5000/BW America Edition',
+        3: 'DXRacer Craft CRA/D5000/P Hello Human Cat',
+        4: 'DXRacer Craft CRA/D5000/W Thinker',
+        5: 'DXRacer Craft CRA/D5000/NC9 Guild Wars 2: End of Dragons Edition',
+        6: 'DXRacer Craft CRA/D5000/GY Astronaut',
+        7: 'DXRacer Craft CRA/D5000/YW Rabbit in Dino'
       },
       textBlocksRight: [
         'Компьютерное кресло DXRacer Craft CRA/D5000/YW Rabbit in Dino – кресло новой серии DXRAcer, созданных на базе серии Drifting.',
@@ -154,7 +154,7 @@ export default {
   .text-blocks {
     width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
   }
-  .color-block{
+  .color-block {
     width: 30px;
     height: 30px;
   }
@@ -167,7 +167,7 @@ export default {
   .text-blocks {
     width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
   }
-  .color-block{
+  .color-block {
     width: 40px;
     height: 40px;
   }
@@ -184,7 +184,7 @@ export default {
 
 }
 
-@media (min-width: 1024px)  and (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
   .container {
     height: auto;
   }

@@ -6,19 +6,20 @@
         <h1>DXRACER CRA/D5000</h1>
         <p>- геймерское кресло Craft Originals,
           обитое классической черной эко-кожей с изящной золотой прострочкой.</p>
-        <button class="golden-button"  @click="showModal = true">Оформить заказ</button>
+        <button class="golden-button" @click="showModal = true">Оформить заказ</button>
       </div>
       <div class="image-container slide-up">
         <img src="@/assets/D5000N-002.2560.png" alt="Изображение справа">
       </div>
     </div>
-    <order-modal v-model:showModal="showModal" />
+    <order-modal v-model:showModal="showModal"/>
 
   </header>
 </template>
 
 <script>
 import OrderModal from '@/components/form/OrderModal.vue'
+
 export default {
   components: {
     OrderModal,
@@ -85,6 +86,7 @@ export default {
     transform: translateY(0);
   }
 }
+
 .golden-button {
   background-color: rgba(255, 255, 255, 0.5);
   border: 3px solid gold;
@@ -94,7 +96,7 @@ export default {
   cursor: pointer;
   font-size: 1.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 15px ;
+  border-radius: 15px;
 }
 
 .golden-button:hover {
@@ -115,6 +117,7 @@ export default {
   z-index: -1;
   border-radius: 50%;
 }
+
 .text-container,
 .image-container {
   flex: 1;
@@ -140,8 +143,10 @@ img {
     height: 100%;
 
   }
-}@media (max-width: 768px) {
-  .page-header{
+}
+
+@media (max-width: 768px) {
+  .page-header {
     align-items: normal;
     padding-top: 5%;
     height: 150%;
@@ -152,7 +157,7 @@ img {
     padding: 20px;
     height: 140vh;
   }
-  .image-container::after{
+  .image-container::after {
     display: none;
   }
 
@@ -166,14 +171,14 @@ img {
   .golden-button {
     font-size: 1rem;
   }
-  image-container{
+  image-container {
     width: 50%;
   }
 
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .page-header{
+  .page-header {
     align-items: normal;
     padding-top: 5%;
 
@@ -190,7 +195,7 @@ img {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .page-header{
+  .page-header {
     align-items: normal;
     padding-top: 5%;
 
@@ -209,7 +214,7 @@ img {
   .full-screen-block {
     padding: 50px;
   }
-  .page-header{
+  .page-header {
     align-items: normal;
     padding-top: 5%;
 
@@ -220,8 +225,6 @@ img {
     padding: 25px;
   }
 }
-
-
 
 
 </style>

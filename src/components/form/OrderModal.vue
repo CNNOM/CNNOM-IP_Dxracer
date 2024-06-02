@@ -19,7 +19,7 @@
 import FormGroup from '@/components/form/FormGroup.vue'
 
 export default {
-  components: { FormGroup },
+  components: {FormGroup},
   data() {
     return {
       form: {
@@ -96,7 +96,7 @@ button[type="submit"] {
   color: gold;
   cursor: pointer;
   font-size: 1.2rem;
-  border-radius: 15px ;
+  border-radius: 15px;
 
 }
 

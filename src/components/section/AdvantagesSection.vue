@@ -85,6 +85,7 @@ export default {
   border-radius: 30px;
 
 }
+
 .plus-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,7 +94,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .container{
+  .container {
     height: auto;
     background-repeat: repeat;
   }
@@ -108,7 +109,7 @@ export default {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .container{
+  .container {
     height: auto;
     background-repeat: repeat;
   }
@@ -117,7 +118,8 @@ export default {
     display: flex; /* Изменяем grid на flex для простоты центрирования */
     flex-direction: column; /* Изменяем направление на столбец для мобильных устройств */
     justify-content: center; /* Центрируем элементы по горизонтали */
-    align-items: center; /* Центрируем элементы по вертикали */    width: 80vw;
+    align-items: center; /* Центрируем элементы по вертикали */
+    width: 80vw;
   }
 }
 

@@ -1,17 +1,17 @@
 <template>
-<div class="container">
-  <div class="modal-content">
-    <h2>Оформление заказа</h2>
-    <form @submit.prevent="submitForm">
-      <form-group id="firstName" label="Имя" v-model="form.firstName" required></form-group>
-      <form-group id="lastName" label="Фамилия" v-model="form.lastName" required></form-group>
-      <form-group id="phone" label="Телефон" type="tel" v-model="form.phone" required></form-group>
-      <form-group id="email" label="Email" type="email" v-model="form.email" required></form-group>
-      <form-group id="city" label="Город" v-model="form.city" required></form-group>
-      <button type="submit">Отправить</button>
-    </form>
+  <div class="container">
+    <div class="modal-content">
+      <h2>Оформление заказа</h2>
+      <form @submit.prevent="submitForm">
+        <form-group id="firstName" label="Имя" v-model="form.firstName" required></form-group>
+        <form-group id="lastName" label="Фамилия" v-model="form.lastName" required></form-group>
+        <form-group id="phone" label="Телефон" type="tel" v-model="form.phone" required></form-group>
+        <form-group id="email" label="Email" type="email" v-model="form.email" required></form-group>
+        <form-group id="city" label="Город" v-model="form.city" required></form-group>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -63,6 +63,7 @@ export default {
   background-position: center;
   padding: 10% 5%;
 }
+
 .modal {
   top: 0;
   left: 0;
@@ -99,7 +100,7 @@ button[type="submit"] {
   color: gold;
   cursor: pointer;
   font-size: 1.2rem;
-  border-radius: 15px ;
+  border-radius: 15px;
 
 }
 

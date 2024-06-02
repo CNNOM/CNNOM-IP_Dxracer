@@ -9,7 +9,8 @@
           <img src="@/assets/logo/DXRacer_Logo.png" alt="Логотип" class="logo">
         </div>
         <div class="footer-right">
-          <a href="https://github.com/CNNOM/CNNOM-IP_Dxracer" target="_blank" rel="noopener noreferrer" class="github-link">
+          <a href="https://github.com/CNNOM/CNNOM-IP_Dxracer" target="_blank" rel="noopener noreferrer"
+             class="github-link">
             <img src="@/assets/logo/git.png" alt="GitHub" class="github-logo">
             <span class="github-text">  GitHub</span>
           </a>
@@ -20,9 +21,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -48,7 +47,8 @@ export default {
   width: 33%;
 
 }
-a{
+
+a {
   color: white;
   text-decoration: none;
 

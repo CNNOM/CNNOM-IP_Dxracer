@@ -1,10 +1,10 @@
 <template>
   <div class="form-group">
-    <label :for="id">{{label}}</label>
+    <label :for="id">{{ label }}</label>
     <input
-      :type="type"
-      :id="id"
-      :required="required">
+        :type="type"
+        :id="id"
+        :required="required">
   </div>
 </template>
 

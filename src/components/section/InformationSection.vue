@@ -6,16 +6,21 @@
       </div>
       <div class="text-container">
         <h2>КРЕСЛА DXRACER CRAFT </h2>
-        <p>Серия Craft от DXRacer – это линейка уникальных кресел, каждое из которых имеет свой собственный дизайн. Их отличительной особенностью является нанесение на обивку из мягкой эко-кожи необычных рисунков по технологии трехмерной вышивки.</p>
-        <p>Спинка кресел данной серии имеет угол наклона до 150 градусов, качание кресла осуществляется при помощи механизма мультиблок, а подлокотники обладают 4D-регулировкой. Также в спинку встроена регулируемая поясничная опора, способствующая сохранению осанки.</p>
+        <p>Серия Craft от DXRacer – это линейка уникальных кресел, каждое из которых имеет свой собственный дизайн. Их
+          отличительной особенностью является нанесение на обивку из мягкой эко-кожи необычных рисунков по технологии
+          трехмерной вышивки.</p>
+        <p>Спинка кресел данной серии имеет угол наклона до 150 градусов, качание кресла осуществляется при помощи
+          механизма мультиблок, а подлокотники обладают 4D-регулировкой. Также в спинку встроена регулируемая поясничная
+          опора, способствующая сохранению осанки.</p>
         <p>В качестве наполнителя для подушки-подголовника используется мягкая пена и охлаждающий гель.</p>
-        <p>Помимо всего прочего, в названии серии есть особый смысл. Ведь вы можете кастомизировать кресло по своему вкусу, заказав нанесение собственного изображения и свою уникальную расцветку.</p>
+        <p>Помимо всего прочего, в названии серии есть особый смысл. Ведь вы можете кастомизировать кресло по своему
+          вкусу, заказав нанесение собственного изображения и свою уникальную расцветку.</p>
         <h4>DxRacer Craft – скрафть свое кресло сам!</h4>
-        <button class="golden-button"  @click="showModal = true">Оформить заказ</button>
+        <button class="golden-button" @click="showModal = true">Оформить заказ</button>
       </div>
     </div>
   </div>
-  <order-modal v-model:showModal="showModal" />
+  <order-modal v-model:showModal="showModal"/>
 </template>
 
 <script>
@@ -94,7 +99,7 @@ p {
     width: 90vw;
     font-size: 16px;
   }
-  .image-container{
+  .image-container {
     display: none;
   }
   .text-container {
@@ -112,7 +117,7 @@ p {
     width: 80vw;
     font-size: 18px;
   }
-  .image-container{
+  .image-container {
     display: none;
   }
   .text-container {
@@ -126,7 +131,7 @@ p {
     width: 75vw;
     font-size: 16px;
   }
-  .image-container{
+  .image-container {
     height: 400px;
     width: 400px;
   }
@@ -142,7 +147,7 @@ p {
     width: 70vw;
     font-size: 18px;
   }
-  .image-container{
+  .image-container {
     height: 430px;
     width: 430px;
   }
@@ -152,12 +157,13 @@ p {
     padding-right: 50px;
   }
 }
+
 @media (min-width: 1480px) and (max-width: 1600px) {
   .container {
     width: 70vw;
     font-size: 20px;
   }
-  .image-container{
+  .image-container {
     height: 500px;
     width: 500px;
   }
@@ -167,11 +173,12 @@ p {
     padding-right: 50px;
   }
 }
+
 @media (min-width: 1600px) and (max-width: 1920px) {
   .container {
     width: 70vw;
   }
-  .image-container{
+  .image-container {
     height: 650px;
     width: 650px;
   }
