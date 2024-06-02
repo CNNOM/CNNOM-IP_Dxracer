@@ -1,44 +1,50 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+  <div>
+    <first-screen ref="firstScreen"/>
+    <information-section ref="informationSection"/>
+    <advantages-section ref="advantagesSection"/>
   </div>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
+<script>
+import FirstScreen from '@/components/FirstScreen.vue'
+import AdvantagesSection from "@/components/AdvantagesSection.vue";
+import InformationSection from "@/components/InformationSection.vue";
 
-h3 {
-  font-size: 1.2rem;
-}
+export default {
+  components: {FirstScreen, AdvantagesSection, InformationSection},
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const firstScreen = this.$refs.firstScreen.$el;
+      const informationSection = this.$refs.informationSection.$el;
+      const advantagesSection = this.$refs.advantagesSection.$el;
 
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
+      if (window.innerHeight + window.scrollY >= firstScreen.offsetTop + firstScreen.offsetHeight && window.scrollY < informationSection.offsetTop) {
+        window.scrollTo(0, informationSection.offsetTop);
+      } else if (window.innerHeight + window.scrollY >= informationSection.offsetTop + informationSection.offsetHeight && window.scrollY < advantagesSection.offsetTop) {
+        window.scrollTo(0, advantagesSection.offsetTop);
+      }
+    }
   }
+
+}
+</script>
+
+<style lang="scss" scoped>
+.full-page-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
 }
 </style>
