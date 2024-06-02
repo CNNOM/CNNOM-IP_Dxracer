@@ -3,7 +3,7 @@
     <div class="full-screen-block">
       <div class="text-container slide-up">
         <img src="@/assets/DXRacer_Primary_Black_Logo.png">
-        <h1>DXRACER CRA/D5000/N</h1>
+        <h1>DXRACER CRA/D5000</h1>
         <p>- геймерское кресло Craft Originals,
           обитое классической черной эко-кожей с изящной золотой прострочкой.</p>
         <button class="golden-button"  @click="showModal = true">Оформить заказ</button>
