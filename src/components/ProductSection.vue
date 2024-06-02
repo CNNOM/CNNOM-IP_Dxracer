@@ -1,20 +1,27 @@
 <template>
-  <div class="image-switcher">
-    <h1>
-      ddddddddddddd
-    </h1>
-    <div class="main-image">
-      <p>{{selectedImage}}</p>
-      <img :src="selectedImage" alt="Selected Image">
+  <div class="container">
+    <div class="text-blocks">
+      <h1>Компьютерное кресло {{this.nameChairs}}</h1>
     </div>
-    <div class="color-switcher">
-      <div
-          v-for="(color, index) in Object.values(colors)"
-          :key="index"
-          :style="{ backgroundColor: color }"
-          @click="changeImage(index)"
-          class="color-block"
-      ></div>
+    <div class="image-switcher">
+      <h1>Our chairs</h1>
+      <div class="main-image">
+        <img :src="selectedImage" alt="Selected Image">
+      </div>
+      <div class="color-switcher">
+        <div
+            v-for="(color, index) in Object.values(colors)"
+            :key="index"
+            :style="{ backgroundColor: color }"
+            @click="changeImage(index)"
+            class="color-block"
+        ></div>
+      </div>
+    </div>
+    <div class="text-blocks">
+      <div v-for="(text, index) in textBlocksRight" :key="index" class="text-block">
+        <p>{{ text }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -34,6 +41,7 @@ export default {
   data() {
     return {
       selectedImage: '',
+      nameChairs: '',
       colors: {
         0: '#000000',
         1: '#ffc400',
@@ -53,23 +61,49 @@ export default {
         5: blackBlue,
         6: greyYellow,
         7: yellow,
-      }
+      },
+      nameChairsId: {
+        0:'DXRacer Craft CRA/D5000/N Originals',
+        1:'DXRacer Craft CRA/D5000/NC1 Koi Fish',
+        2:'DXRacer Craft CRA/D5000/BW America Edition',
+        3:'DXRacer Craft CRA/D5000/P Hello Human Cat',
+        4:'DXRacer Craft CRA/D5000/W Thinker',
+        5:'DXRacer Craft CRA/D5000/NC9 Guild Wars 2: End of Dragons Edition' ,
+        6:'DXRacer Craft CRA/D5000/GY Astronaut',
+        7:'DXRacer Craft CRA/D5000/YW Rabbit in Dino'
+      },
+      textBlocksRight: [
+        'Компьютерное кресло DXRacer Craft CRA/D5000/YW Rabbit in Dino – кресло новой серии DXRAcer, созданных на базе серии Drifting.',
+        'Кресло DXRacer Craft CRA/D5000/YW выполнено из Эко-кожи яркого желтого цвета с вышитым изображением пушистого кролика. Но это только с одной стороны.',
+        'С другой же стороны это уже совсем не милый кролик, а свирепый Дракон готовый к подвигам! Желтое кресло DXRacer Rabbit in Dino многих порадует своим оригинальным рисунком и яркой расцветкой.'
+      ]
     };
   },
   methods: {
     changeImage(index) {
       this.selectedImage = this.images[index];
+      this.nameChairs = this.nameChairsId[index];
       console.log(this.selectedImage)
+      console.log(this.nameChairs)
     },
   },
   mounted() {
     // Установка изображения по умолчанию при монтировании компонента
+    this.nameChairs = this.nameChairsId[0];
     this.selectedImage = this.images[0];
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .image-switcher {
   text-align: center;
   padding: 20px;
@@ -80,8 +114,8 @@ export default {
 }
 
 .main-image img {
-  max-width: 100%;
-  height: auto;
+  max-width: 70vw;
+  height: 70vh;
 }
 
 .color-switcher {
@@ -91,11 +125,22 @@ export default {
 
 .color-block {
   border: 1px solid rgba(0, 0, 0, 0.35);
-
   width: 50px;
   height: 50px;
   margin: 5px;
   border-radius: 50%;
   cursor: pointer;
+}
+.text-blocks{
+  text-align: center;
+  margin: 5vw;
+  width: 30%;
+}
+.text-block {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 </style>
