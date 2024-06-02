@@ -73,12 +73,11 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  display: flex; /* Добавляем flex контейнер */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
-  width: 100%; /* Или любая фиксированная ширина, которая позволяет центрировать */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100vh;
-  //background-color: #ffffff;
   background-image: url("@/assets/chairs/fon-chairs.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,10 +89,48 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 1000px;
-  margin: 0 auto; /* Центрирует сетку по горизонтали */
-
-
+  margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .container{
+    height: auto;
+    background-repeat: repeat;
+  }
+  .plus-list {
+    grid-template-columns: 1fr;
+    display: flex; /* Изменяем grid на flex для простоты центрирования */
+    flex-direction: column; /* Изменяем направление на столбец для мобильных устройств */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */
+    width: 90vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container{
+    height: auto;
+    background-repeat: repeat;
+  }
+  .plus-list {
+    grid-template-columns: 1fr;
+    display: flex; /* Изменяем grid на flex для простоты центрирования */
+    flex-direction: column; /* Изменяем направление на столбец для мобильных устройств */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */    width: 80vw;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .plus-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+  .plus-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 </style>

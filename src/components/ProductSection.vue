@@ -23,7 +23,6 @@
         <p>{{ text }}</p>
       </div>
     </div>
-<!--    <img class="'background-svg'" src="@/assets/chairs/fon-chairs.svg" alt="">-->
   </div>
 </template>
 
@@ -97,14 +96,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
+.container {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column; /* Изменение направления flex на столбец для мобильных устройств */
   justify-content: center;
   align-items: center;
-
 }
+
 .image-switcher {
   text-align: center;
   padding: 20px;
@@ -116,7 +116,7 @@ export default {
 
 .main-image img {
   max-width: 70vw;
-  height: 70vh;
+  height: auto; /* Изменение высоты на автоматическую для сохранения пропорций */
 }
 
 .color-switcher {
@@ -132,11 +132,13 @@ export default {
   border-radius: 50%;
   cursor: pointer;
 }
-.text-blocks{
+
+.text-blocks {
   text-align: center;
   margin: 5vw;
-  width: 30%;
+  width: 100%; /* Изменение ширины на 100% для адаптации */
 }
+
 .text-block {
   flex: 1;
   margin: 10px;
@@ -145,4 +147,71 @@ export default {
   border-radius: 5px;
 }
 
+@media (max-width: 479px) {
+  .container {
+    height: auto;
+  }
+  .text-blocks {
+    width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
+  }
+  .color-block{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .container {
+    height: auto;
+  }
+  .text-blocks {
+    width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
+  }
+  .color-block{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    height: auto;
+  }
+  .text-blocks {
+    width: 80%; /* Возвращаем ширину блоков текста для планшетов и более крупных устройств */
+  }
+
+}
+
+@media (min-width: 1024px)  and (max-width: 1280px) {
+  .container {
+    height: auto;
+  }
+  .main-image img {
+    max-width: 50vw; /* Уменьшаем максимальную ширину изображения для более крупных экранов */
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .container {
+    height: 100vh;
+    flex-direction: row; /* Изменение направления flex на столбец для мобильных устройств */
+
+  }
+  .main-image img {
+    max-width: 40vw; /* Уменьшаем максимальную ширину изображения для еще более крупных экранов */
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    height: 100vh;
+    flex-direction: row; /* Изменение направления flex на столбец для мобильных устройств */
+  }
+
+  .main-image img {
+    max-width: 30vw; /* Уменьшаем максимальную ширину изображения для самых крупных экранов */
+  }
+}
 </style>

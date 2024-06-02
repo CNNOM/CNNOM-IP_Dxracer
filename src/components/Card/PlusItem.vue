@@ -34,8 +34,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 500px;
-  margin-top: 5rem;
-
+  margin-top: 3rem;
 }
 
 .plus-icon {
@@ -50,7 +49,7 @@ export default {
 .plus-item h2 {
   font-size: 1.2rem;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   padding: 4px;
 }
 
@@ -58,5 +57,11 @@ export default {
   font-size: 0.9rem;
   color: #666;
   width: 300px;
+}
+
+@media (max-width: 768px) {
+  .plus-item{
+    width: auto;
+  }
 }
 </style>

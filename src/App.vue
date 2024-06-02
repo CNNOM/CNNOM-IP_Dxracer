@@ -4,6 +4,7 @@ import AdvantagesSection from "@/components/AdvantagesSection.vue";
 import InformationSection from "@/components/InformationSection.vue";
 import ProductSection from "@/components/ProductSection.vue";
 import FooterSection from "@/components/FooterSection.vue";
+import SectionForm from "@/components/SectionForm.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import FooterSection from "@/components/FooterSection.vue";
   <information-section/>
   <advantages-section/>
   <product-section/>
+  <section-form/>
 
   <footer-section/>
 </template>
