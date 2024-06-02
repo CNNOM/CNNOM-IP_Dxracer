@@ -140,11 +140,11 @@ p {
 @media (min-width: 1281px) and (max-width: 1480px) {
   .container {
     width: 70vw;
-    font-size: 20px;
+    font-size: 18px;
   }
   .image-container{
-    height: 450px;
-    width: 450px;
+    height: 430px;
+    width: 430px;
   }
 
   .text-container {
