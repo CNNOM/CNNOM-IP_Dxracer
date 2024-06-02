@@ -1,47 +1,23 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import FirstScreen from '@/components/section/FirstScreen.vue'
+import AdvantagesSection from "@/components/section/AdvantagesSection.vue";
+import InformationSection from "@/components/section/InformationSection.vue";
+import ProductSection from "@/components/section/ProductSection.vue";
+import FooterSection from "@/components/section/FooterSection.vue";
+import SectionForm from "@/components/section/SectionForm.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <first-screen/>
+  <information-section/>
+  <advantages-section/>
+  <product-section/>
+  <section-form/>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <footer-section/>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
