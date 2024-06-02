@@ -195,7 +195,7 @@ export default {
 
 @media (min-width: 1280px) and (max-width: 1920px) {
   .container {
-    height: auto;
+    height: 100vh;
     flex-direction: row; /* Изменение направления flex на столбец для мобильных устройств */
 
   }
@@ -206,10 +206,8 @@ export default {
 
 @media (min-width: 1920px) {
   .container {
-    height: auto;
+    height: 100vh;
     flex-direction: row; /* Изменение направления flex на столбец для мобильных устройств */
-
-
   }
 
   .main-image img {
