@@ -7,6 +7,7 @@ import FirstScreen from '@/components/FirstScreen.vue'
 
   <first-screen/>
 
+
 </template>
 
 <style scoped>
