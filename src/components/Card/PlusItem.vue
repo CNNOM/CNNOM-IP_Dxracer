@@ -1,6 +1,6 @@
 <template>
   <div class="plus-item">
-    <img :src="icon"  class="plus-icon" alt="">
+    <img :src="icon" class="plus-icon" alt="">
     <div class="plus-text">
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
@@ -42,10 +42,12 @@ export default {
   height: 50px;
   margin-bottom: 1rem;
 }
-.plus-text{
+
+.plus-text {
   border: 2px solid black;
   border-radius: 10px;
 }
+
 .plus-item h2 {
   font-size: 1.2rem;
   color: #333;
@@ -60,7 +62,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .plus-item{
+  .plus-item {
     width: auto;
   }
 }
