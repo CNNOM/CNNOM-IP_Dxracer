@@ -4,26 +4,11 @@
       <span class="close" @click="closeModal">&times;</span>
       <h2>Оформление заказа</h2>
       <form @submit.prevent="submitForm">
-        <div class="form-group">
-          <label for="firstName">Имя</label>
-          <input type="text" id="firstName" v-model="form.firstName" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Фамилия</label>
-          <input type="text" id="lastName" v-model="form.lastName" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" v-model="form.phone" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" v-model="form.email" required>
-        </div>
-        <div class="form-group">
-          <label for="city">Город</label>
-          <input type="text" id="city" v-model="form.city" required>
-        </div>
+        <form-group id="firstName" label="Имя" v-model="form.firstName" required></form-group>
+        <form-group id="lastName" label="Фамилия" v-model="form.lastName" required></form-group>
+        <form-group id="phone" label="Телефон" type="tel" v-model="form.phone" required></form-group>
+        <form-group id="email" label="Email" type="email" v-model="form.email" required></form-group>
+        <form-group id="city" label="Город" v-model="form.city" required></form-group>
         <button type="submit">Отправить</button>
       </form>
     </div>
@@ -31,7 +16,10 @@
 </template>
 
 <script>
+import FormGroup from '@/components/form/FormGroup.vue'
+
 export default {
+  components: { FormGroup },
   data() {
     return {
       form: {
@@ -52,10 +40,19 @@ export default {
   methods: {
     closeModal() {
       this.$emit('update:showModal', false);
+      this.resetForm();
     },
     submitForm() {
       console.log(this.form);
+      this.resetForm();
       this.closeModal();
+    },
+    resetForm() {
+      this.form.firstName = '';
+      this.form.lastName = '';
+      this.form.phone = '';
+      this.form.email = '';
+      this.form.city = '';
     }
   }
 }
@@ -88,23 +85,6 @@ export default {
   right: 15px;
   font-size: 28px;
   cursor: pointer;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  margin-right: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 button[type="submit"] {
