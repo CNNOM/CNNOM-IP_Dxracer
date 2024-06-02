@@ -23,6 +23,7 @@
         <p>{{ text }}</p>
       </div>
     </div>
+<!--    <img class="'background-svg'" src="@/assets/chairs/fon-chairs.svg" alt="">-->
   </div>
 </template>
 
@@ -143,4 +144,5 @@ export default {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
 </style>

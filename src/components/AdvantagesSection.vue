@@ -53,13 +53,21 @@ export default {
   align-items: center; /* Центрируем по вертикали */
   width: 100%; /* Или любая фиксированная ширина, которая позволяет центрировать */
   height: 100vh;
-  background-color: #ffffff;
+  //background-color: #ffffff;
+  background-image: url("@/assets/chairs/fon-chairs.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+
 }
 .plus-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 1000px;
   margin: 0 auto; /* Центрирует сетку по горизонтали */
+
+
 }
 
 
