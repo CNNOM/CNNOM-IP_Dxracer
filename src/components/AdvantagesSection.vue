@@ -2,34 +2,11 @@
   <div class="container">
     <div class="plus-list">
       <plus-item
-          icon="@/assets/advantages/icon1.png"
-          title="Уникальный дизайн"
-          description="Уникальный внешний вид благодаря дизайну с рисунком и возможностям персональной кастомизации"
-      />
-      <plus-item
-          icon="@/assets/advantages/icon2.png"
-          title="Ультрамягкий"
-          description="Ультрамягкий подголовник наполненный пеной с эффектом памяти"
-      />
-      <plus-item
-        icon="@/assets/advantages/icon3.png"
-        title="Максимальные регулировки"
-        description="Максимальный набор регулировок для удобства посадки"
-      />
-      <plus-item
-          icon="@/assets/advantages/icon4.png"
-          title="Заточенность"
-          description="Заточенность под среднестатистического пользователя"
-      />
-      <plus-item
-          icon="@/assets/advantages/icon5.png"
-          title="Быстрая сборка"
-          description="Рекордно быстрая скорость сборки"
-      />
-      <plus-item
-          icon="@/assets/advantages/icon6.png"
-          title="Высокое качество"
-          description="Высокое качество материалов и изготовления"
+          v-for="item in items"
+          :key="item.id"
+          :icon="item.icon"
+          :title="item.title"
+          :description="item.description"
       />
     </div>
   </div>
@@ -37,11 +14,59 @@
 
 <script>
 import PlusItem from "@/components/Card/PlusItem.vue";
+import icon1 from "@/assets/advantages/icon1.png"
+import icon2 from "@/assets/advantages/icon2.png"
+import icon3 from "@/assets/advantages/icon3.png"
+import icon4 from "@/assets/advantages/icon4.png"
+import icon5 from "@/assets/advantages/icon5.png"
+import icon6 from "@/assets/advantages/icon6.png"
 
 export default {
   components: {
     PlusItem,
-  }
+  },
+  data() {
+    return {
+      items: [
+        {
+          id: 0,
+          icon: icon1,
+          title: "Уникальный дизайн",
+          description: "Уникальный внешний вид благодаря дизайну с рисунком и возможностям персональной кастомизации",
+        },
+        {
+          id: 1,
+          icon: icon2,
+          title: "Ультрамягкий",
+          description: "Ультрамягкий подголовник наполненный пеной с эффектом памяти",
+        },
+        {
+          id: 2,
+          icon: icon3,
+          title: "Максимальные регулировки",
+          description: "Максимальный набор регулировок для удобства посадки",
+        },
+        {
+          id: 3,
+          icon: icon4,
+          title: "Заточенность",
+          description: "Заточенность под среднестатистического пользователя",
+        },
+        {
+          id: 4,
+          icon: icon5,
+          title: "Быстрая сборка",
+          description: "Рекордно быстрая скорость сборки",
+        },
+        {
+          id: 5,
+          icon: icon6,
+          title: "Высокое качество",
+          description: "Высокое качество материалов и изготовления",
+        },
+      ],
+    };
+  },
 
 }
 </script>
