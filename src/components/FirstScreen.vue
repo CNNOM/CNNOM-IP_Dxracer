@@ -130,47 +130,98 @@ img {
   height: auto;
 }
 
-@media screen and (max-width: 1920px) {
-  .full-screen-block {
-    padding: 5vh 5vw; /* Отступы сверху и снизу 5vh, по бокам 5vw */
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .full-screen-block {
-    padding: 4vh 4vw; /* Отступы сверху и снизу 4vh, по бокам 4vw */
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .full-screen-block {
-    padding: 3vh 3vw; /* Отступы сверху и снизу 3vh, по бокам 3vw */
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .full-screen-block {
-    padding: 2vh 2vw; /* Отступы сверху и снизу 2vh, по бокам 2vw */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .full-screen-block {
-    padding: 1vh 1vw; /* Отступы сверху и снизу 1vh, по бокам 1vw */
-  }
-}
 
 @media screen and (max-width: 480px) {
   .full-screen-block {
     padding: 0.5vh 0.5vw; /* Отступы сверху и снизу 0.5vh, по бокам 0.5vw */
   }
+  image-container {
+    width: 100%;
+    height: 100%;
+
+  }
+}@media (max-width: 768px) {
+  .page-header{
+    align-items: normal;
+    padding-top: 5%;
+    height: 150%;
+  }
+
+  .full-screen-block {
+    flex-direction: column;
+    padding: 20px;
+    height: 140vh;
+  }
+  .image-container::after{
+    display: none;
+  }
+
+  .text-container,
+  .image-container {
+    flex: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .golden-button {
+    font-size: 1rem;
+  }
+  image-container{
+    width: 50%;
+  }
+
 }
 
-@media screen and (max-width: 320px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page-header{
+    align-items: normal;
+    padding-top: 5%;
+
+  }
   .full-screen-block {
-    padding: 0.5vh 0.5vw; /* Отступы сверху и снизу 0.5vh, по бокам 0.5vw */
+    padding-top: 5%;
+
+  }
+
+  .text-container,
+  .image-container {
+    padding: 15px;
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .page-header{
+    align-items: normal;
+    padding-top: 5%;
+
+  }
+  .full-screen-block {
+    padding: 40px;
+  }
+
+  .text-container,
+  .image-container {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+  .full-screen-block {
+    padding: 50px;
+  }
+  .page-header{
+    align-items: normal;
+    padding-top: 5%;
+
+  }
+
+  .text-container,
+  .image-container {
+    padding: 25px;
+  }
+}
+
+
 
 
 </style>
