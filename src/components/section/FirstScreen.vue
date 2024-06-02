@@ -2,14 +2,14 @@
   <header class="page-header">
     <div class="full-screen-block">
       <div class="text-container slide-up">
-        <img src="@/assets/DXRacer_Primary_Black_Logo.png">
+        <img src="../../assets/DXRacer_Primary_Black_Logo.png">
         <h1>DXRACER CRA/D5000</h1>
         <p>- геймерское кресло Craft Originals,
           обитое классической черной эко-кожей с изящной золотой прострочкой.</p>
         <button class="golden-button"  @click="showModal = true">Оформить заказ</button>
       </div>
       <div class="image-container slide-up">
-        <img src="@/assets/D5000N-002.2560.png" alt="Изображение справа">
+        <img src="../../assets/D5000N-002.2560.png" alt="Изображение справа">
       </div>
     </div>
     <order-modal v-model:showModal="showModal" />
