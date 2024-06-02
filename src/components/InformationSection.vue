@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import OrderModal from "@/components/OrderModal.vue";
+import OrderModal from "@/components/form/OrderModal.vue";
 
 export default {
   components: {OrderModal},
