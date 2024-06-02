@@ -34,7 +34,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 500px;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .plus-icon {
@@ -49,7 +49,7 @@ export default {
 .plus-item h2 {
   font-size: 1.2rem;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   padding: 4px;
 }
 
@@ -58,26 +58,10 @@ export default {
   color: #666;
   width: 300px;
 }
-@media  (max-width: 768px) {
-  .plus-item {
-    width: 50%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .plus-item {
-    width: 80vw;
-  }
-}
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .plus-item {
-    width: 70vw;
-  }
-}
-
-@media (min-width: 1281px) and (max-width: 1920px) {
-  .plus-item {
-    width: 60vw;
+@media (max-width: 768px) {
+  .plus-item{
+    width: auto;
   }
 }
 </style>

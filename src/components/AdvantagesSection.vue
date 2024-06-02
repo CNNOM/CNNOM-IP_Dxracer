@@ -96,7 +96,6 @@ export default {
   .container{
     height: auto;
     background-repeat: repeat;
-
   }
   .plus-list {
     grid-template-columns: 1fr;
@@ -109,23 +108,28 @@ export default {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  .container{
+    height: auto;
+    background-repeat: repeat;
+  }
   .plus-list {
-    grid-template-columns: repeat(2, 1fr);
-    width: 80vw;
+    grid-template-columns: 1fr;
+    display: flex; /* Изменяем grid на flex для простоты центрирования */
+    flex-direction: column; /* Изменяем направление на столбец для мобильных устройств */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */    width: 80vw;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .plus-list {
     grid-template-columns: repeat(2, 1fr);
-    width: 70vw;
   }
 }
 
 @media (min-width: 1281px) and (max-width: 1920px) {
   .plus-list {
     grid-template-columns: repeat(2, 1fr);
-    width: 60vw;
   }
 }
 
