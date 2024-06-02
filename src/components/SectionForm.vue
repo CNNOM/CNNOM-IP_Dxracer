@@ -57,7 +57,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("@/assets/black-gold-marble-texture.jpg");
+  background-image: url("@/assets/5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 10% 5%;
 }
 .modal {
