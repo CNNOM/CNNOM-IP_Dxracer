@@ -6,11 +6,11 @@
           <span>Работа выполнена: Зенков Алексей Ильич</span>
         </div>
         <div class="footer-center">
-          <img src="../../assets/DXRacer_Logo.png" alt="Логотип" class="logo">
+          <img src="@/assets/logo/DXRacer_Logo.png" alt="Логотип" class="logo">
         </div>
         <div class="footer-right">
           <a href="https://github.com/CNNOM/CNNOM-IP_Dxracer" target="_blank" rel="noopener noreferrer" class="github-link">
-            <img src="../../assets/git2.png" alt="GitHub" class="github-logo">
+            <img src="@/assets/logo/git.png" alt="GitHub" class="github-logo">
             <span class="github-text">  GitHub</span>
           </a>
         </div>

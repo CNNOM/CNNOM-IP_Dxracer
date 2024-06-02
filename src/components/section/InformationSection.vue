@@ -2,7 +2,7 @@
   <div class="full-screen-container">
     <div class="container">
       <div class="image-container">
-        <img src="../../assets/information/img1.jpg" alt="Картинка справа">
+        <img src="@/assets/information/img1.jpg" alt="Картинка справа">
       </div>
       <div class="text-container">
         <h2>КРЕСЛА DXRACER CRAFT </h2>
