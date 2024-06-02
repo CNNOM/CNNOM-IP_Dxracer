@@ -1,69 +1,66 @@
 <template>
-  <div class="plus-list">
-    <div class="plus-item">
-      <img src="@/assets/advantages/icon1.png" alt="Icon 1" class="plus-icon">
-      <h2>Уникальный дизайн</h2>
-      <p>Уникальный внешний вид благодаря дизайну с рисунком и возможностям персональной кастомизации</p>
-    </div>
-    <div class="plus-item">
-      <img src="@/assets/advantages/icon2.png" alt="Icon 2" class="plus-icon">
-      <h2>Ультрамягкий</h2>
-      <p>Ультрамягкий подголовник наполненный пеной с эффектом памяти</p>
-    </div>
-    <div class="plus-item">
-      <img src="@/assets/advantages/icon3.png" alt="Icon 3" class="plus-icon">
-      <h2>Максимальные регулировки</h2>
-      <p>Максимальный набор регулировок для удобства посадки</p>
-    </div>
-    <div class="plus-item">
-      <img src="@/assets/advantages/icon4.png" alt="Icon 4" class="plus-icon">
-      <h2>Заточенность</h2>
-      <p>Заточенность под среднестатистического пользователя</p>
-    </div>
-    <div class="plus-item">
-      <img src="@/assets/advantages/icon5.png" alt="Icon 5" class="plus-icon">
-      <h2>Быстрая сборка</h2>
-      <p>Рекордно быстрая скорость сборки</p>
-    </div>
-    <div class="plus-item">
-      <img src="@/assets/advantages/icon6.png" alt="Icon 5" class="plus-icon">
-      <h2>Высокое качество</h2>
-      <p>Высокое качество материалов и изготовления</p>
+  <div class="container">
+    <div class="plus-list">
+      <plus-item
+          icon="@/assets/advantages/icon1.png"
+          title="Уникальный дизайн"
+          description="Уникальный внешний вид благодаря дизайну с рисунком и возможностям персональной кастомизации"
+      />
+      <plus-item
+          icon="@/assets/advantages/icon2.png"
+          title="Ультрамягкий"
+          description="Ультрамягкий подголовник наполненный пеной с эффектом памяти"
+      />
+      <plus-item
+        icon="@/assets/advantages/icon3.png"
+        title="Максимальные регулировки"
+        description="Максимальный набор регулировок для удобства посадки"
+      />
+      <plus-item
+          icon="@/assets/advantages/icon4.png"
+          title="Заточенность"
+          description="Заточенность под среднестатистического пользователя"
+      />
+      <plus-item
+          icon="@/assets/advantages/icon5.png"
+          title="Быстрая сборка"
+          description="Рекордно быстрая скорость сборки"
+      />
+      <plus-item
+          icon="@/assets/advantages/icon6.png"
+          title="Высокое качество"
+          description="Высокое качество материалов и изготовления"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import PlusItem from "@/components/Card/PlusItem.vue";
+
 export default {
+  components: {
+    PlusItem,
+  }
 
 }
 </script>
 
 <style lang="scss" scoped>
+.container {
+  display: flex; /* Добавляем flex контейнер */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  width: 100%; /* Или любая фиксированная ширина, которая позволяет центрировать */
+  height: 100vh;
+  background-color: #ffffff;
+}
 .plus-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 1000px;
+  margin: 0 auto; /* Центрирует сетку по горизонтали */
 }
 
-.plus-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 
-.plus-icon {
-  width: 2rem;
-  height: 2rem;
-}
-
-.plus-item h2 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.plus-item p {
-  font-size: 1rem;
-  color: #666;
-}
 </style>

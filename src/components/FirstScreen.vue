@@ -41,7 +41,6 @@ export default {
   align-items: center;
   height: 100vh;
   //background-color: #4a4a4a;
-  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2); /* Тень справа и слева */
 }
 
 .full-screen-block {
